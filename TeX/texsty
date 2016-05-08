@@ -7,9 +7,10 @@ for file in $files
 do
     filename=`echo $file | cut -f1 -d'.'`
     echo sudo mkdir -p -v /usr/local/texlive/2015basic/texmf-local/tex/latex/${filename}
-    echo sudo mv ${file} /usr/local/texlive/2015basic/texmf-local/tex/latex/${filename}
 
     sudo mkdir -p -v /usr/local/texlive/2015basic/texmf-local/tex/latex/${filename}
+
+    echo sudo mv ${file} /usr/local/texlive/2015basic/texmf-local/tex/latex/${filename}
     sudo mv ${file} /usr/local/texlive/2015basic/texmf-local/tex/latex/${filename}
 done
 
