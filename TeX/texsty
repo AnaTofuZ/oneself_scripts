@@ -3,6 +3,11 @@
 
 files=`ls -1 *.sty`
 
+
+if [ ${files} -z ] ; then
+    exit 1
+fi
+
 for file in $files
 do
     filename=`echo $file | cut -f1 -d'.'`
