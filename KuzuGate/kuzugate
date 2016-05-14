@@ -4,12 +4,14 @@ timecheck=`date "+%H%M"`
 
 #echo $timecheck
 
-declare -a random=($(($RANDOM % 2)))
+declare -a random=($(($RANDOM % 3)))
 
 if [ $random = 0 ] ; then
     txt=`cat ./kuzu_pun/kinu_rap.txt`
 elif [ $random = 1 ] ; then
     txt=`cat ./kuzu_pun/namatsutarap.txt`
+elif [ $random = 2 ] ; then
+    txt=`cat ./kuzu_pun/ika.txt`
 
 fi
 
