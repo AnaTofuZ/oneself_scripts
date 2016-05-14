@@ -1,0 +1,5 @@
+#!/bin/sh
+
+timecheck=`date "+%H%M"`
+
+echo $timecheck
