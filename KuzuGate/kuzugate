@@ -2,6 +2,11 @@
 
 timecheck=`date "+%H%M"`
 
+if [ $timecheck = 2359 ] ; then
+    txt=`cat ./kuzu_pun/23:59:20.txt`
+    echo "$txt"
+    exit 0
+fi
 #echo $timecheck
 
 declare -a random=($(($RANDOM % 3)))
