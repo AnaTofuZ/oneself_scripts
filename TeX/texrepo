@@ -102,11 +102,11 @@ cat << EOF >$filename.tex
     \begin{flushright}
         {\large
             \fontsize{16pt}{0pt}\selectfont
-          所  属  :琉球大学 工学部 情報工学科\\\\
+          所  属  :バカ田大学 工学部 情報工学科\\\\
             \vspace{5truept}
-          学籍番号:155730B\\\\
+          学籍番号:1192TKROKMKRBKF\\\\
             \vspace{5truept}
-          氏  名  :清水 隆博\\\\
+          氏  名  :バカボンのパパ\\\\
             \vspace{5truept}
           提 出 日:{\today}\\\\
             \vspace{5truept}
