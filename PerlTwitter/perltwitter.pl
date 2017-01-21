@@ -9,14 +9,14 @@ binmode STDOUT,":utf8";
 
 use Net::Twitter;
 
-
+my $keys =require ('Keys');
 
 my $nt = Net::Twitter ->new({
     traits => [qw/OAuth API::RESTv1_1/],
-    consumer_key => $consumerKey,
-    consumer_secret => $consumerSecret,
-    access_token => $accessToken,
-    access_token_secret => $accessTokenSecret}
+    consumer_key => $keys->{"consumerKey"},
+    consumer_secret => $keys->{"consumerSecret"},
+    access_token => $keys->{"accessToken"},
+    access_token_secret => $keys->{"accessTokenSecret"}}
     );
 
 
