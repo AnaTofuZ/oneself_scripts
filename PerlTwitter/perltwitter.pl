@@ -2,6 +2,7 @@
 use strict;
 use warnings;
 use utf8;
+use Encode;
 binmode STDOUT,":utf8";
 
 use Net::Twitter;
@@ -27,6 +28,7 @@ while (<STDIN>) {
 
 sub tweet {
     my ($msg) = @_;
+    $msg = decode_utf8($msg);
     my $ret = $nt->update({status=>$msg});
     print "Cannot post!!" unless $ret;
 
