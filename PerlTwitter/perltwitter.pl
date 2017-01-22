@@ -27,6 +27,10 @@ while (<STDIN>) {
         next;
     } 
 
+    if ($_ eq "tl"){
+        &tl;
+        next;
+    } 
     &tweet($_);
 }
 
@@ -49,4 +53,13 @@ sub replay {
         printf(" %s 【%s】「%s」\n",$mentionID,$mentionUser,$mentionText);
 
     }
+}
+
+sub tl {
+    
+    my $res = $nt->home_timeline({
+            count => 100,
+        });
+
+    print Dumper $res;
 }
