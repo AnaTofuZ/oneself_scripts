@@ -58,7 +58,7 @@ sub replay {
 sub tl {
     
     my $res = $nt->home_timeline({
-            count => 100,
+            count => 10,
         });
 
     for my $timeline (@$res){
