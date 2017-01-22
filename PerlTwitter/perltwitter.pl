@@ -50,7 +50,7 @@ sub replay {
         my $mentionUser = $mention->{user}->{screen_name};
         my $mentionID = $mention->{user}->{name};
 
-        printf(" %s 【%s】「%s」\n",$mentionID,$mentionUser,$mentionText);
+        printf(" %s 【@%s】「%s」\n",$mentionID,$mentionUser,$mentionText);
 
     }
 }
@@ -61,5 +61,12 @@ sub tl {
             count => 100,
         });
 
-    print Dumper $res;
+    for my $timeline (@$res){
+        my $timelineText = $timeline->{text};
+        my $timelineUser = $timeline->{user}->{screen_name};
+        my $timelineID = $timeline->{user}->{name};
+
+        printf(" %s 【@%s】「%s」\n",$timelineID,$timelineUser,$timelineText);
+
+    }
 }
