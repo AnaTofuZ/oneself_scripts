@@ -24,7 +24,7 @@ while (<STDIN>) {
     chomp;
     if ($_ eq "mention"){
         &replay;
-        redo;
+        next;
     } 
 
     &tweet($_);
